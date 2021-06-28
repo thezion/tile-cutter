@@ -151,16 +151,17 @@ class TileCutter:
                     if original_mode == "RGBA":
                         if self.compress:
                             tile = tile.convert("RGB")
-                            tile.save(os.path.join(tile_dir, "%d_%d.png" % (col, row)), "JPEG")
+                            tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
                         else:
-                            tile.save(os.path.join(tile_dir, "%d_%d.png" % (col, row)), "PNG")
+                            tile.save(os.path.join(tile_dir, "tile-%d_%d.png" % (col-img_width/256/2, img_width/256/2-row-1)), "PNG")
                     else:
                         tile = tile.convert("RGB")
                         # 这里设置
-                        # python tilecutter.py .\lv8.png -lv 8 -min 8 -max 8
-                        tile.save(os.path.join(tile_dir, "tile-%d_%d.png" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
+                        # python tilecutter.py .\lv8.png -lv 8 -min 8 -max 8 -c
+                        tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
                 else:  # Not a full tile of size equal to tile_size
-                    tile.save(os.path.join(tile_dir, "%d_%d.png" % (col, row)), "PNG")
+                    tile = tile.convert("RGB")
+                    tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
 
     def cut(self):
         if not os.path.isfile(self.path):
