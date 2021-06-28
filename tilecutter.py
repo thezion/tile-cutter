@@ -158,10 +158,12 @@ class TileCutter:
                         tile = tile.convert("RGB")
                         # 这里设置
                         # python tilecutter.py .\lv8.png -lv 8 -min 8 -max 8 -c
+                        # python tilecutter.py .\lv7.png -lv 7 -min 4 -max 7 -c
+                        # python tilecutter.py .\lv3.png -lv 3 -min 3 -max 3 -c
                         tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
                 else:  # Not a full tile of size equal to tile_size
-                    tile = tile.convert("RGB")
-                    tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
+                    # tile = tile.convert("RGB")
+                    tile.save(os.path.join(tile_dir, "tile-%d_%d.png" % (col-img_width/256/2, img_width/256/2-row-1)), "PNG")
 
     def cut(self):
         if not os.path.isfile(self.path):

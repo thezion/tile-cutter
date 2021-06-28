@@ -15,9 +15,9 @@ FOR /L %%i IN (11,1,24) DO (
 )
 
 :: 个文件
-FOR /L %%i IN (-8,1,-12) DO (
+FOR /L %%i IN (-12,1,-7) DO (
   del lv7\6\tile-%%i_*.jpg
 )
-FOR /L %%i IN (7,1,12) DO (
+FOR /L %%i IN (5,1,12) DO (
   del lv7\6\tile-*_%%i.jpg
 )
