@@ -1,8 +1,8 @@
 :: 9025 = 5090个文件
-FOR /L %%i IN (-48,1,-24) DO (
+FOR /L %%i IN (-64,1,-24) DO (
   del lv11\11\tile-%%i_*.jpg
 )
-FOR /L %%i IN (21,1,47) DO (
+FOR /L %%i IN (21,1,63) DO (
   del lv11\11\tile-*_%%i.jpg
 )
 
