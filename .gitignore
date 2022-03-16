@@ -40,3 +40,5 @@ node_modules
 lv*
 *.png
 __pycache__
+enkanomiya*
+v*

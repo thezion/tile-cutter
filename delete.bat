@@ -1,23 +1,38 @@
-:: 9025 = 5090个文件
+:: 左
+FOR /L %%i IN (-16,1,-6) DO (
+  del v26-rc1\13\tile-%%i_*.jpg
+)
+:: 右
+FOR /L %%i IN (12,1,16) DO (
+  del v26-rc1\13\tile-%%i_*.jpg
+)
+:: 上
+FOR /L %%i IN (7,1,16) DO (
+  del v26-rc1\13\tile-*_%%i.jpg
+)
+
+:: 左
+FOR /L %%i IN (-32,1,-12) DO (
+  del v26-rc1\14\tile-%%i_*.jpg
+)
+:: 右
+FOR /L %%i IN (24,1,32) DO (
+  del v26-rc1\14\tile-%%i_*.jpg
+)
+:: 上
+FOR /L %%i IN (14,1,32) DO (
+  del v26-rc1\14\tile-*_%%i.jpg
+)
+
+:: 左
 FOR /L %%i IN (-64,1,-24) DO (
-  del lv11\11\tile-%%i_*.jpg
+  del v26-rc1\15\tile-%%i_*.jpg
 )
-FOR /L %%i IN (21,1,63) DO (
-  del lv11\11\tile-*_%%i.jpg
+:: 右
+FOR /L %%i IN (48,1,64) DO (
+  del v26-rc1\15\tile-%%i_*.jpg
 )
-
-:: 个文件
-FOR /L %%i IN (-24,1,-13) DO (
-  del lv10\10\tile-%%i_*.jpg
-)
-FOR /L %%i IN (11,1,24) DO (
-  del lv10\10\tile-*_%%i.jpg
-)
-
-:: 个文件
-FOR /L %%i IN (-12,1,-7) DO (
-  del lv10\9\tile-%%i_*.jpg
-)
-FOR /L %%i IN (5,1,12) DO (
-  del lv10\9\tile-*_%%i.jpg
+:: 上
+FOR /L %%i IN (28,1,64) DO (
+  del v26-rc1\15\tile-*_%%i.jpg
 )
