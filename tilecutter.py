@@ -157,10 +157,9 @@ class TileCutter:
                     else:
                         tile = tile.convert("RGB")
                         # 这里设置
-                        # python tilecutter.py .\lv11.png -lv 11 -min 11 -max 11 -c
-                        # python tilecutter.py .\lv10.png -lv 10 -min 8 -max 10 -c
-                        # python tilecutter.py .\lv7.png -lv 7 -min 7 -max 7 -c
-                        # python tilecutter.py .\lv6.png -lv 6 -min 6 -max 6 -c
+                        # python tilecutter.py .\xxx.png -lv 15 -min 10 -max 15 -c // 32768
+                        # python tilecutter.py .\xxx.png -lv 14 -min 10 -max 14 -c // 16384
+                        # python tilecutter.py .\xxx.png -lv 13 -min 10 -max 13 -c // 8192
                         tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
                 else:  # Not a full tile of size equal to tile_size
                     # tile = tile.convert("RGB")
