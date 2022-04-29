@@ -39,7 +39,9 @@ node_modules
 
 lv*
 *.png
+*.jpg
 __pycache__
 enkanomiya*
 v*
 chasm*
+8/

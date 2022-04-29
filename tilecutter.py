@@ -160,6 +160,9 @@ class TileCutter:
                         # python tilecutter.py .\xxx.png -lv 15 -min 10 -max 15 -c // 32768
                         # python tilecutter.py .\xxx.png -lv 14 -min 10 -max 14 -c // 16384
                         # python tilecutter.py .\xxx.png -lv 13 -min 10 -max 13 -c // 8192
+                        # python tilecutter.py .\xxx.png -lv 12 -min 10 -max 12 -c // 4096
+                        # python tilecutter.py .\xxx.png -lv 11 -min 10 -max 11 -c // 2048
+                        # python tilecutter.py .\xxx.png -lv 10 -min 10 -max 10 -c // 1024 - 4x4
                         tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
                 else:  # Not a full tile of size equal to tile_size
                     # tile = tile.convert("RGB")
