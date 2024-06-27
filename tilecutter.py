@@ -157,12 +157,16 @@ class TileCutter:
                     else:
                         tile = tile.convert("RGB")
                         # 这里设置
-                        # python tilecutter.py D:\CDN\gim\map-teyvat\3.1-z15.png -lv 15 -min 15 -max 15 -c // 32768
-                        # python tilecutter.py D:\CDN\gim\map-teyvat\3.1-z14.png -lv 14 -min 14 -max 14 -c // 16384
-                        # python tilecutter.py D:\CDN\gim\map-teyvat\3.1-z13.png -lv 13 -min 13 -max 13 -c // 8192
-                        # python tilecutter.py D:\CDN\gim\map-teyvat\3.1-z12.png -lv 12 -min 12 -max 12 -c // 4096
-                        # python tilecutter.py D:\CDN\gim\map-teyvat\3.1-z11.png -lv 11 -min 11 -max 11 -c // 2048
-                        # python tilecutter.py D:\CDN\gim\map-teyvat\3.1-z10.png -lv 10 -min 10 -max 10 -c // 1024 - 4x4
+                        # python tilecutter.py D:\CDN\gim\map-teyvat\z15.png -lv 15 -min 15 -max 15 -c // 32768
+                        # python tilecutter.py D:\CDN\gim\map-teyvat\z14.png -lv 14 -min 14 -max 14 -c // 16384
+                        # python tilecutter.py D:\CDN\gim\map-teyvat\z13.png -lv 13 -min 10 -max 13 -c // 8192
+                        # python tilecutter.py D:\CDN\gim\map-teyvat\z12.png -lv 12 -min 12 -max 12 -c // 4096
+                        # python tilecutter.py D:\CDN\gim\map-teyvat\z11.png -lv 11 -min 10 -max 11 -c // 2048
+                        # python tilecutter.py D:\CDN\gim\map-teyvat\z10.png -lv 10 -min 10 -max 10 -c // 1024 - 4x4
+
+                        # python tilecutter.py D:\CDN\ww\map-main\z14.png -lv 14 -min 10 -max 14 -c
+                        # python tilecutter.py D:\CDN\ww\map-main\z15.png -lv 15 -min 15 -max 15 -c
+                        
                         tile.save(os.path.join(tile_dir, "tile-%d_%d.jpg" % (col-img_width/256/2, img_width/256/2-row-1)), "JPEG")
                 else:  # Not a full tile of size equal to tile_size
                     # tile = tile.convert("RGB")
